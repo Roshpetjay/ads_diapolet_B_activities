@@ -42,6 +42,13 @@ Route::get('/students/delete', function (){
     return 'Student Deleted!';
 });
 
+Route::get('/courses/create', function(){
+    $course = new Course();
+    $course->course_name = 'Introduction to Databases';
+    $course->save();
+    return 'Course Created!';
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
